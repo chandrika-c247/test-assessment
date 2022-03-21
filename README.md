@@ -1,4 +1,4 @@
-# Backend ETH Server
+# Backend Test Assessment
 
 ## How To Run
 
