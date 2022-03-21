@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --exec babel-node ./src/server.js",
     "build": "babel src -d dist --copy-files",
-    "build:live": "env-cmd -f .env.production babel src -d dist --copy-files",
     "start": "node dist/server.js",
     "prestart": "npm run build",
     "gen:doc": "npm run build && ./node_modules/.bin/apidoc-swagger - build/ -o ./ -e node_modules/"
