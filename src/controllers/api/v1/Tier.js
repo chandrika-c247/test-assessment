@@ -4,11 +4,12 @@ import { TierModel } from "../../../models";
 import { Messages } from "../../../common";
 
 /**
- * @api {get} /api/v1.0.0/tier  Tier - Tier list
+ * @api {get} /api/v1/tier  Tier - Tier list
  * @apiName Tier - Tier list
  * @apiGroup Tier
  * @apiPermission none
  * @apiDescription List of all tier
+ * @apiSuccess {String} tierName Name of the tier.
  * @apiSuccessExample {json} Success
  * HTTP/1.1 200 OK
  * {
@@ -34,11 +35,17 @@ const list = async (req, res) => {
 };
 
 /**
- * @api {get} /api/v1.0.0/tier/:id  Tier - Get tier info
+ * @api {get} /api/v1/tier/:id  Tier - Get tier info
  * @apiName Tier - Get tier info
  * @apiGroup Tier
  * @apiPermission none
  * @apiDescription Tier info
+ * @apiParam {String} id id of the service.
+ * @apiParamExample {Object} Request-Example:
+    {
+      id: "",
+    }
+ * @apiSuccess {String} tierName Name of the tier.
  * @apiSuccessExample {json} Success
  * HTTP/1.1 200 OK
  * {

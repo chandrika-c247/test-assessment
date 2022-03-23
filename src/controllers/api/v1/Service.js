@@ -4,22 +4,12 @@ import { ServiceModel } from "../../../models";
 import { Messages } from "../../../common";
 
 /**
- * @api {get} /api/v1.0.0/service  Service - Service List
+ * @api {get} /api/v1/service  Service - Service List
  * @apiName Service - Service List
  * @apiGroup Service
  * @apiPermission none
  * @apiDescription List of all service
- * @apiSuccessExample {json} Success
- * HTTP/1.1 200 OK
- * {
- *   "message": "Service List",
- *   "data": [ServiceObject]
- * }
- * @apiErrorExample {json} List error
- * HTTP/1.1 500 Internal server error
- * {
- *    "message": "Internal Server Error"
- * }
+ * @apiSuccess {String} serviceName Name of the service.
  */
 const list = async (req, res) => {
   try {
@@ -34,11 +24,13 @@ const list = async (req, res) => {
 };
 
 /**
- * @api {get} /api/v1.0.0/service/:id  Service - Get service info
+ * @api {get} /api/v1/service/:slug  Service - Get service info
  * @apiName Service - Get service info
  * @apiGroup Service
  * @apiPermission none
  * @apiDescription Service info
+ * @apiParam {String} slug slug of the service.
+ * @apiSuccess {String} serviceName Name of the service.
  * @apiSuccessExample {json} Success
  * HTTP/1.1 200 OK
  * {

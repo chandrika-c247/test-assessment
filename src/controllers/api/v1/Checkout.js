@@ -4,7 +4,7 @@ import { ServiceModel, TierModel, OrderModel } from "../../../models";
 import { Messages } from "../../../common";
 
 /**
- * @api {post} /api/v1.0.1/checkout  Checkout - Place order
+ * @api {post} /api/v1/checkout  Checkout - Place order
  * @apiName Checkout - Place order
  * @apiGroup Checkout
  * @apiPermission none
@@ -30,6 +30,7 @@ import { Messages } from "../../../common";
  *    "service": "62388fb7d6abc531f045234d",
  *    "tier": "62388fb7d6abc531f0452349"
  * }
+ * @apiSuccess {String} firstName First name of the user.
  * @apiSuccessExample {json} Success
  * HTTP/1.1 200 OK
  * {
